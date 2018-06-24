@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.min.css';
-import './App.css';
 
 class Page extends Component {
   render() {
@@ -158,11 +156,5 @@ class App extends Component {
     );
   }
 }
-
-let tiles = document.querySelectorAll('.is-child');
-tiles.forEach(element => {
-  element.style.height = element.style.width;
-  console.log('did this run');
-});
 
 export default App;
