@@ -9,6 +9,8 @@ const appCss = fs.readFileSync('./src/App.css');
 const rendered = ReactDOMServer.renderToStaticMarkup(<App />);
 const html = `<html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
             ${bulmaCss}
             ${indexCss}
@@ -16,6 +18,6 @@ const html = `<html>
         </style>
     </head>
     <body>${rendered}</body>
-</html>`
+</html>`;
 
 fs.writeFileSync('index.html', html);
