@@ -152,7 +152,7 @@ class App extends Component {
           <LevelTitle title="experience" />
         </Page>
         <Page id="contact"> 
-          <LevelTitle title="contact" />
+          <LevelTitle title="AAAAAAAAAAAAAAAAAA" />
         </Page>
       </div>
     );
