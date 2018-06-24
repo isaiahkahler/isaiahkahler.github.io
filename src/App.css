@@ -7,3 +7,8 @@
   background-color: #fff;
 }
 
+.landing {
+	background-image: url('/media/index.jpg');
+	background-position: center;
+	background-size: cover;
+}
