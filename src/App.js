@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import 'bulma/css/bulma.min.css';
+import './App.css';
 
 class Page extends Component {
   render() {
     return (
-      <div className="page" id={this.props.id}>
+      <div className="page section" id={this.props.id}>
         <div style={{ height: 52 + 'px' }} />
         {this.props.children}
       </div>
@@ -77,14 +77,60 @@ class LevelTitle extends Component {
 class Landing extends Component {
   render() {
     return (
-      <section class="hero is-fullheight landing" id="about">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">Hey! I'm Isaiah.</h1>
-            <h2 class="subtitle">I'm a computer science student and I code.</h2>
+      <section className="hero is-fullheight landing" id="about">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">Hey! I'm Isaiah.</h1>
+            <h2 className="subtitle">I'm a computer science student and I code.</h2>
           </div>
         </div>
       </section>
+    );
+  }
+}
+
+class Container extends Component {
+  render() {
+    return(
+      <div className="container">{this.props.children}</div>
+    );
+  }
+}
+
+class SkillBoard extends Component {
+  render() {
+    return(
+      <div className="tile is-ancestor">
+        <div className="tile is-vertical">
+          <div className="tile is-parent">
+            <div className="tile is-child js "></div>
+          </div>
+          <div className="tile is-vertical">
+            <div className="tile is-parent">
+              <div className="tile is-child node"></div>
+            </div>
+            <div className="tile is-parent">
+              <div className="tile is-child cc"></div>
+              <div className="tile is-child office"></div>
+            </div>
+          </div>
+        </div>
+        <div className="tile is-vertical">
+          <div className="tile is-vertical">
+            <div className="tile is-parent">
+              <div className="tile is-child five"></div>
+              <div className="tile is-child ts"></div>
+            </div>
+            <div className="tile is-parent">
+              <div className="tile is-child three"></div>
+              <div className="tile is-child react"></div>
+            </div>
+          </div>
+          <div className="tile is-parent">
+            <div className="tile is-child java"></div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
@@ -97,6 +143,7 @@ class App extends Component {
         <Landing />
         <Page id="skills" classes="content">
           <LevelTitle title="skills" />
+          <Container><SkillBoard /></Container>
         </Page>
         <Page id="projects">
           <LevelTitle title="projects" />
@@ -111,5 +158,11 @@ class App extends Component {
     );
   }
 }
+
+let tiles = document.querySelectorAll('.is-child');
+tiles.forEach(element => {
+  element.style.height = element.style.width;
+  console.log('did this run');
+});
 
 export default App;
