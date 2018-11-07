@@ -29,3 +29,7 @@ input {
     font-family: 'Heebo', sans-serif;
     font-size: 4vh;
 }
+
+#message {
+    display: none;
+}

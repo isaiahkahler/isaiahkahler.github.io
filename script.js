@@ -40,5 +40,9 @@ form.addEventListener('submit', async (event) => {
     let names = await getData();
     names.push(event.srcElement[0].value)
     await postData(names);
-    setTimeout(() => placeNames(), 1000)
+    setTimeout(() => {submitted = true}, 50);
+    setTimeout(() => placeNames(), 500);
+    form.style.display = 'none';
+    document.getElementById('label').style.display = 'none';
+    document.getElementById('message').style.display = 'block';
 })
