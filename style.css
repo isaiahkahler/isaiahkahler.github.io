@@ -3,7 +3,7 @@ body {
     margin: 5vw;
 }
 
-h1,h2,h3 {
+h1,h2,h3,p {
     color: #fff;
     font-family: 'Heebo', sans-serif;
     margin: 0;
@@ -19,4 +19,13 @@ h2 {
 
 h3 {
     font-size: 5vh;
+}
+
+p {
+    font-size: 4vh;
+}
+
+input {
+    font-family: 'Heebo', sans-serif;
+    font-size: 4vh;
 }
