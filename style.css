@@ -47,6 +47,8 @@ form {
     border: none;
     border-radius: 0;
     text-decoration: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 #message {
