@@ -28,11 +28,14 @@ p {
 input {
     font-family: 'Heebo', sans-serif;
     font-size: 4vh;
-    display: inline;
+    /* display: inline; */
 }
 
 form {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nameField{
@@ -41,7 +44,9 @@ form {
 
 .submitButton {
     width: 20vw;
-    margin: 0 4vw;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
 }
 
 #message {
