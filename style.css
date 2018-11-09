@@ -28,6 +28,20 @@ p {
 input {
     font-family: 'Heebo', sans-serif;
     font-size: 4vh;
+    display: inline;
+}
+
+form {
+    display: flex;
+}
+
+.nameField{
+    width: 70vw;
+}
+
+.submitButton {
+    width: 20vw;
+    margin: 0 4vw;
 }
 
 #message {
